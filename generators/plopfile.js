@@ -6,7 +6,7 @@ module.exports = function (plop) {
       {
         type: 'input',
         name: 'name',
-        message: 'controller name please'
+        message: 'component name please'
       }
     ],
     actions: [
@@ -14,6 +14,21 @@ module.exports = function (plop) {
         type: 'add',
         path: '../src/components/{{pascalCase name}}/index.tsx',
         templateFile: 'templates/index.tsx.hbs'
+      },
+      {
+        type: 'add',
+        path: '../src/components/{{pascalCase name}}/stories.tsx',
+        templateFile: 'templates/stories.tsx.hbs'
+      },
+      {
+        type: 'add',
+        path: '../src/components/{{pascalCase name}}/styles.ts',
+        templateFile: 'templates/styles.ts.hbs'
+      },
+      {
+        type: 'add',
+        path: '../src/components/{{pascalCase name}}/test.ts',
+        templateFile: 'templates/test.ts.hbs'
       }
     ]
   })
